@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deskcheck — coming soon</title>
+  <meta name="description" content="Deskcheck: open-source, AI-driven GUI testing for Windows desktop apps (Delphi/VCL, WinForms, WPF). Coming soon.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232f6fdf'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' stroke='white' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #f7f8fa; --fg: #16181d; --muted: #5b6270; --accent: #2f6fdf; --card: #ffffff; --border: #e3e6ec;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0f1115; --fg: #e8eaef; --muted: #9aa2b1; --accent: #6b9bff; --card: #171a21; --border: #262b35; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px;
+      background: var(--bg); color: var(--fg);
+      font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 620px; width: 100%; }
+    .mark { display: inline-flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.6rem; letter-spacing: -0.01em; }
+    .mark svg { width: 40px; height: 40px; }
+    h1 { font-size: clamp(1.7rem, 5vw, 2.4rem); line-height: 1.2; margin: 28px 0 12px; letter-spacing: -0.02em; }
+    p { color: var(--muted); margin: 0 0 16px; }
+    .badge { display: inline-block; font-size: .8rem; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 2px 10px; }
+    ul { list-style: none; padding: 0; margin: 24px 0; display: grid; gap: 10px; }
+    li { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+    li b { color: var(--fg); }
+    a { color: var(--accent); }
+    footer { margin-top: 28px; font-size: .9rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mark">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#2f6fdf"/><path d="M9 16.5l4.5 4.5L23 11.5" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Deskcheck
+    </div>
+    <h1>AI-driven GUI testing for Windows desktop apps.</h1>
+    <p><span class="badge">Coming soon</span></p>
+    <p>Deskcheck is an open-source (Apache-2.0) framework that lets AI agents drive, test and verify
+      Windows desktop applications — Delphi/VCL, WinForms, WPF and more. It is being extracted from an
+      existing product and prepared for its first public release.</p>
+    <ul>
+      <li><b>Runner</b> — a <code>dotnet tool</code> (<code>deskcheck</code>)</li>
+      <li><b>Adapters</b> — UI Automation, Delphi</li>
+      <li><b>Fleet</b> — Hyper-V test-VM tooling (<code>Deskcheck.Fleet</code>)</li>
+      <li><b>Agent skill</b> — so coding agents can test desktop apps end to end</li>
+    </ul>
+    <p>Follow along on <a href="https://github.com/deskcheck/deskcheck">GitHub</a>
+      or write to <a href="mailto:hello@deskcheck.pro">hello@deskcheck.pro</a>.</p>
+    <footer>© Deskcheck contributors · Apache-2.0</footer>
+  </main>
+</body>
+</html>
