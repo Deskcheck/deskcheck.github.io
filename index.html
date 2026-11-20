@@ -9,9 +9,11 @@
   <style>
     :root {
       --bg: #f7f8fa; --fg: #16181d; --muted: #5b6270; --accent: #2f6fdf; --card: #ffffff; --border: #e3e6ec;
+      --form-card: #ffffff;
     }
     @media (prefers-color-scheme: dark) {
-      :root { --bg: #0f1115; --fg: #e8eaef; --muted: #9aa2b1; --accent: #6b9bff; --card: #171a21; --border: #262b35; }
+      :root { --bg: #0f1115; --fg: #e8eaef; --muted: #9aa2b1; --accent: #6b9bff; --card: #171a21; --border: #262b35;
+        --form-card: #dfe3ea; }
     }
     * { box-sizing: border-box; }
     body {
@@ -30,7 +32,15 @@
     li b { color: var(--fg); }
     a { color: var(--accent); }
     footer { margin-top: 28px; font-size: .9rem; color: var(--muted); }
+    #beta { margin-top: 36px; padding-top: 8px; border-top: 1px solid var(--border); }
+    h2 { font-size: 1.4rem; margin: 20px 0 8px; letter-spacing: -0.01em; }
+    /* Tally draws dark text whatever the page theme, so the form sits on a light card in both themes;
+       in dark mode the card is a dimmer grey so it does not glare. */
+    #beta iframe { display: block; width: 100%; border: 1px solid var(--border); border-radius: 10px;
+      background: var(--form-card); padding: 8px 14px; margin: 8px 0 12px; }
+    .small { font-size: .9rem; }
   </style>
+  <noscript><style>#beta iframe { display: none; }</style></noscript>
 </head>
 <body>
   <main>
@@ -39,7 +49,7 @@
       Deskcheck
     </div>
     <h1>AI-driven GUI testing for Windows desktop apps.</h1>
-    <p><span class="badge">Coming soon</span></p>
+    <p><span class="badge">Coming soon</span> &nbsp;<a href="#beta">Join the beta</a></p>
     <p>Deskcheck is a developer tool that lets AI agents drive, test and verify
       Windows desktop applications — Delphi/VCL, WinForms, WPF and more. It is being extracted from an
       existing product and prepared for its first public release.</p>
@@ -51,7 +61,28 @@
     </ul>
     <p>Follow along on <a href="https://github.com/Deskcheck/claude-plugin">GitHub</a>
       or write to <a href="mailto:hello@deskcheck.pro">hello@deskcheck.pro</a>.</p>
-    <footer>© 2026 Ihor Bielykh</footer>
+    <section id="beta">
+      <h2>Join the beta</h2>
+      <p>Tell us about your app; we will contact you when the beta opens.</p>
+      <iframe data-tally-src="https://tally.so/embed/GepNPo?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
+        loading="lazy" height="600" title="Join the Deskcheck beta"></iframe>
+      <script>
+        // Load the form straight from Tally when its script fails to load (onerror below) or loads but
+        // never fills the iframe (an ad blocker's empty stand-in, a proxy page): 4 s after the page load,
+        // and only when Tally's script did not define window.Tally. A working script fills the iframe
+        // itself once the form comes near the screen, so the timer must not race it.
+        function deskcheckTallyFallback() {
+          document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function (f) { f.src = f.dataset.tallySrc; });
+        }
+        window.addEventListener('load', function () {
+          setTimeout(function () { if (typeof window.Tally === 'undefined') deskcheckTallyFallback(); }, 4000);
+        });
+      </script>
+      <script async src="https://tally.so/widgets/embed.js" onerror="deskcheckTallyFallback()"></script>
+      <p class="small">Form not showing? <a href="https://tally.so/r/GepNPo">Open it on Tally</a>
+        or write to <a href="mailto:hello@deskcheck.pro">hello@deskcheck.pro</a>.</p>
+    </section>
+    <footer>© 2026 Ihor Bielykh · <a href="/privacy.html">Privacy</a></footer>
   </main>
 </body>
 </html>

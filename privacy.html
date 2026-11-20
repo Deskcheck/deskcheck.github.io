@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deskcheck — Privacy</title>
+  <meta name="description" content="How Deskcheck handles the data you send through the beta sign-up form.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232f6fdf'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' stroke='white' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #f7f8fa; --fg: #16181d; --muted: #5b6270; --accent: #2f6fdf; --card: #ffffff; --border: #e3e6ec;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0f1115; --fg: #e8eaef; --muted: #9aa2b1; --accent: #6b9bff; --card: #171a21; --border: #262b35; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px;
+      background: var(--bg); color: var(--fg);
+      font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 620px; width: 100%; }
+    .mark { display: inline-flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.6rem; letter-spacing: -0.01em; color: var(--fg); text-decoration: none; }
+    .mark svg { width: 40px; height: 40px; }
+    h1 { font-size: clamp(1.7rem, 5vw, 2.4rem); line-height: 1.2; margin: 28px 0 12px; letter-spacing: -0.02em; }
+    h2 { font-size: 1.15rem; margin: 28px 0 8px; }
+    p, li { color: var(--muted); }
+    p { margin: 0 0 16px; }
+    ul { margin: 0 0 16px; padding-left: 1.2em; }
+    b { color: var(--fg); }
+    a { color: var(--accent); }
+    footer { margin-top: 28px; font-size: .9rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="mark" href="/">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#2f6fdf"/><path d="M9 16.5l4.5 4.5L23 11.5" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Deskcheck
+    </a>
+    <h1>Privacy</h1>
+    <p>This page explains what happens to the data you send through the “Join the beta” form on
+      deskcheck.pro, and what the site and the form touch while you look at them.</p>
+
+    <h2>Who we are</h2>
+    <p>Deskcheck is made by <b>Ihor Bielykh</b>, sole proprietor, Kryvyi Rih, Ukraine. He decides how
+      your data is used (the data controller). Write to
+      <a href="mailto:hello@deskcheck.pro">hello@deskcheck.pro</a> about anything on this page.</p>
+
+    <h2>What we collect</h2>
+    <ul>
+      <li>Your country of residence and that you are not a citizen of Russia or Belarus.</li>
+      <li>Your name, email address and, if you give them, your Telegram name and WhatsApp number, plus
+        how you want us to contact you.</li>
+      <li>About your project: what kind of project it is, the company name, its country and website
+        for a work project, and a project link if you give one. Company details you enter and then
+        remove by choosing another kind of project may still be kept with your sign-up.</li>
+      <li>Your stack: programming languages, UI frameworks, versions, components and the controls that
+        matter to you.</li>
+      <li>Your setup: the AI coding agent you use, whether you have Windows with Hyper-V, and how you
+        heard about Deskcheck.</li>
+      <li>Your consent and whether you want news.</li>
+      <li>When you open deskcheck.pro, the page loads Tally's form script, so Tally receives what any
+        website gets from your browser (your IP address and browser details) and the address of the page,
+        even if you never use the form. Google reCAPTCHA receives the same when you reach the form's last
+        page. While you fill the form in, Tally keeps your unfinished answers in your own browser so you
+        can continue later; they leave your browser only when you press “Join the beta”.</li>
+    </ul>
+
+    <h2>Why</h2>
+    <ul>
+      <li>To contact you about the Deskcheck beta through the channel you chose.</li>
+      <li>To see which applications, frameworks and components the beta needs to support first.</li>
+      <li>To send you Deskcheck news, only if you ticked that box.</li>
+    </ul>
+    <p>We use your sign-up on the basis of your consent, which you give with the checkbox in the form.
+      The country and citizenship questions also serve our legitimate interest in keeping Deskcheck away
+      from Russia and Belarus, and we check them before you reach the consent box; the form refuses
+      automatically, and a sign-up that fails the check is deleted within a week, with its notification
+      email. The form's questions marked as
+      required are needed to join the beta. We do not sell your data and share it with no one beyond the
+      services named below.</p>
+
+    <h2>Where it is kept</h2>
+    <ul>
+      <li>The form runs on <a href="https://tally.so/help/gdpr">Tally</a> (Tally BV, Belgium), which
+        stores the answers for us as our processor.</li>
+      <li>The form uses Google reCAPTCHA to stop spam; Google receives technical data about your browser
+        for that check (<a href="https://policies.google.com/privacy">Google's privacy policy</a>).</li>
+      <li>A copy of each sign-up reaches our mailbox, a Gmail account that Google provides under its own
+        terms. Mail you send to hello@deskcheck.pro is forwarded there by our domain provider, Spaceship
+        (United States).</li>
+      <li>If you asked for news, your name and email address also go to our news list, a private
+        Google Sheets spreadsheet in the same Google account.</li>
+    </ul>
+    <p>We work from Ukraine, so your data is used outside the EU. Ukraine has no EU adequacy decision, so
+      the protection there may differ from the EU's. Google and Spaceship handle it in the
+      United States; Google does so under the EU-US Data Privacy Framework.</p>
+
+    <h2>How long</h2>
+    <p>Your sign-up and its notification email: until the beta ends or you ask us to delete it, and no
+      longer than 24 months after you sign up; we delete both together. If you asked for news, your name
+      and email address stay on the news list until you unsubscribe or withdraw your consent.</p>
+
+    <h2>Your rights</h2>
+    <p>You can ask to see, correct, delete or receive a copy of your data, ask us to restrict how we use
+      it, object to its use, and withdraw your consent at any time; withdrawing does not undo what was
+      done before. Write to <a href="mailto:hello@deskcheck.pro">hello@deskcheck.pro</a>. Your data is
+      protected by the Law of Ukraine “On Personal Data Protection”, and, if you are in the EU or the
+      EEA, by the GDPR; you may also complain to your data protection authority.</p>
+
+    <p>Deskcheck is not available in Russia or Belarus, or to their citizens.</p>
+
+    <footer>Last updated 20 November 2026 · <a href="/">Back to deskcheck.pro</a></footer>
+  </main>
+</body>
+</html>
